@@ -1,5 +1,4 @@
-var startBtn = document.querySelector("#start");
-
+//questions array
 var questionsArray = [
     {
         "question 1": "What are variables used for in JavaScript Programs?",
@@ -28,18 +27,32 @@ var questionsArray = [
     }
     
 ]
+//Variables
+var startButtonEl = document.querySelector("#start-btn");
+console.log(startButtonEl)
+
+//fucntions
+function handleCLick() {
+    console.log('clicked')
+}
+
+function main() {
+    //add start click event listener
+    startButtonEl.addEventListener('click', handleCLick);
+}
+
+
+
+//START
+main();
+
+
 // show first question, start timer 
 // if more questions, move to next question
 //else
     //high score page
     //save score to local storage
-function startQuiz (){
-
-}
 
 
 
 
-
-//listener event---START BTN ----->Start Quiz
-startBtn.addEventListener("click", startQuiz)

@@ -1,38 +1,6 @@
-// click--add listener event
+
 var startBtn = document.querySelector("#start");
 console.log(startBtn);
-
-
-
-//show first question
-//if more questions
-    //next question (create question element)
-//else
-    //high score page
-    //save score to local storage
-
-
-//----------------------------
-
-{/* <h2>
-    This is Q1
-</h2>
-<button>
-    Option 1
-</button>
-<button>
-    Option 2
-</button>
-<button>
-    Option 3
-</button>
-<button>
-    Option 4
-</button> */}
-
-//const timer = document.querySelector("#countdown");
-//var timerSeconds = 60;
-
 const startingMinutes = 2;
 let time = startingMinutes * 60;
 
@@ -46,11 +14,6 @@ function updateCountdown() {
     countdownEl.innerHTML = '2:00';
     time--;
 }
-
-
-
-
-
 
 
 const questionsArray = [
@@ -120,6 +83,5 @@ function startQuiz (){
 //timer begin
 
 startBtn.addEventListener("click", startQuiz)
-
 var nextBtn = document.querySelector('#nextBtn')
 nextBtn.addEventListener("click", createQuestionElements)

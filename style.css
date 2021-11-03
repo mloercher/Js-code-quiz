@@ -1,1 +1,33 @@
+* {
+    margin: 0;
+    
+}
 
+#start-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+h1 {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-text {
+    background-color:black;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+*/

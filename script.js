@@ -48,9 +48,8 @@ var time = 120;
 
 //FUNCTIONS-----------------------------------------------------------
 
+//SELECT ANSWER
 function selectAnswer() {
-  //console.log(this.textContent)
-  //console.log(questionsArray[currentQuestionIndex].correctAnswer)
   var questionsDiv = document.querySelector(".questions");
   if (this.textContent === questionsArray[currentQuestionIndex].correctAnswer) {
     console.log("correct");
@@ -71,14 +70,12 @@ function selectAnswer() {
     questionsDiv.innerHTML = "";
     createCurrentQuestion();
   }
-  setTimeout(reset,2000)
-
-  
-  //replace last question with next
+  setTimeout(reset,500)
 }
 
 //CREATE CURRENT QUESTION
 function createCurrentQuestion() {
+    
   //create a question element
   var questionH2 = document.createElement("h2");
   questionH2.textContent = questionsArray[currentQuestionIndex].text;
@@ -111,27 +108,28 @@ function createCurrentQuestion() {
 
 //START QUIZ
 function startQuiz() {
-  function test() {
+  function timer () {
     time--;
     var countdownTime = document.querySelector('#countdown');
     countdownTime.textContent = time
+    
+  setInterval(timer, 1000 );
+  if (time === 0|| questionsArray.length-1 === currentQuestionIndex){
+    clearInterval(timer)
   }
-  setInterval(test, 1000);
 
   createCurrentQuestion();
   var introText = document.querySelector(".intro-text");
   introText.style.display = "none";
   startButtonEl.style.display = "none";
 
-  //Start timer
-  // function updateCountdown() {
-
-  //     countdownEl.innerHTML = '2:00';
-  //     time--;
-  //     document.getElementById("countdown").innerHTML = "2:00";
-  //     setInterval(updateCountdown, 1000);
-  // }
 }
+
+//END QUIZ
+function endQuiz() {
+    return;
+//input high score 
+};
 
 //EVENT LISTENERS----------------------------------------------------------
 startButtonEl.addEventListener("click", startQuiz);

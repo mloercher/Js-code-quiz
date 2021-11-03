@@ -45,6 +45,7 @@ var questionsArray = [
 var startButtonEl = document.querySelector("#start-btn");
 var currentQuestionIndex = 0;
 var time = 120;
+var s
 
 //FUNCTIONS-----------------------------------------------------------
 
@@ -113,10 +114,16 @@ function startQuiz() {
     var countdownTime = document.querySelector('#countdown');
     countdownTime.textContent = time
     
-  setInterval(timer, 1000 );
-  if (time === 0|| questionsArray.length-1 === currentQuestionIndex){
-    clearInterval(timer)
+    if (time < 0) {
+      clearInterval(time);
+      alert("you ran out of time!");
+      endQuiz();
+    } else if (currentQuestionIndex === questionsArray.length) {
+      clearInterval(time);
+    }
   }
+  setInterval(timer, 1000 );
+  
 
   createCurrentQuestion();
   var introText = document.querySelector(".intro-text");

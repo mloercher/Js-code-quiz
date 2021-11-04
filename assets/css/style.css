@@ -61,7 +61,7 @@ button {
     justify-content: center;
     align-items: center;
     width: 30vw;
-    margin-left: 330px ;
+    margin-left: 450px ;
     margin-right: 0px ;
 }
 
@@ -80,6 +80,30 @@ h2 {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+}
+
+#result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+#user {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+#init {
+  display: flex;
+  flex-direction: row;
 }
 
 /*

@@ -135,7 +135,7 @@ function endQuiz() {
   var input = document.createElement("input");
   var highScoreBtn = document.createElement("button");
   var endBtn = document.createElement("button");
-  endBtn.textContent = "end";
+  endBtn.textContent = "Enter Initials + Submit Score";
 
   var initialsDiv = document.querySelector("#initials");
   initialsDiv.append(input);

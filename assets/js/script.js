@@ -45,25 +45,25 @@ var questionsArray = [
 var startButtonEl = document.querySelector("#start-btn");
 var currentQuestionIndex = 0;
 var time = 120;
-var s
+var minutes = time / 60;
 
-//FUNCTIONS-----------------------------------------------------------
+//FUNCTIONS----------------------------------------------------------- 
 
 //SELECT ANSWER
 function selectAnswer() {
   var questionsDiv = document.querySelector(".questions");
   if (this.textContent === questionsArray[currentQuestionIndex].correctAnswer) {
-    console.log("correct");
-    var correctSelection = document.createElement('h3')
-    correctSelection.textContent = ("correct!");
+    console.log("CORRECT!");
+    var correctSelection = document.createElement("h3");
+    correctSelection.textContent = "CORRECT!";
     questionsDiv.append(correctSelection);
   } else {
-    console.log("incorrect");
-    var incorrectSelection = document.createElement('h3')
-    incorrectSelection.textContent = ("Incorrect!");
+    console.log("INCORRECT");
+    var incorrectSelection = document.createElement("h3");
+    incorrectSelection.textContent = "INCORRECT";
     questionsDiv.append(incorrectSelection);
-    time-=10;
-  } 
+    time -= 10;
+  }
   currentQuestionIndex++;
   var questionsDiv = document.querySelector(".questions");
 
@@ -71,12 +71,11 @@ function selectAnswer() {
     questionsDiv.innerHTML = "";
     createCurrentQuestion();
   }
-  setTimeout(reset,500)
+  setTimeout(reset, 500);
 }
 
 //CREATE CURRENT QUESTION
 function createCurrentQuestion() {
-    
   //create a question element
   var questionH2 = document.createElement("h2");
   questionH2.textContent = questionsArray[currentQuestionIndex].text;
@@ -109,34 +108,59 @@ function createCurrentQuestion() {
 
 //START QUIZ
 function startQuiz() {
-  function timer () {
+  function timer() {
     time--;
-    var countdownTime = document.querySelector('#countdown');
-    countdownTime.textContent = time
-    
+    var countdownTime = document.querySelector("#countdown");
+    countdownTime.textContent = time;
+
     if (time < 0) {
-      clearInterval(time);
+      clearInterval(clock);
       alert("you ran out of time!");
       endQuiz();
     } else if (currentQuestionIndex === questionsArray.length) {
-      clearInterval(time);
+      clearInterval(clock);
+      endQuiz();
     }
   }
-  setInterval(timer, 1000 );
-  
+  var clock = setInterval(timer, 1000);
 
   createCurrentQuestion();
   var introText = document.querySelector(".intro-text");
   introText.style.display = "none";
   startButtonEl.style.display = "none";
-
 }
 
 //END QUIZ
 function endQuiz() {
-    return;
-//input high score 
-};
+  var input = document.createElement("input");
+  var highScoreBtn = document.createElement("button");
+  var endBtn = document.createElement("button");
+  endBtn.textContent = "end";
+
+  var initialsDiv = document.querySelector("#initials");
+  initialsDiv.append(input);
+  input.classList.add("initials");
+  //getCredentials()
+  initialsDiv.append(endBtn);
+  endBtn.addEventListener("click", getCredentials);
+  //input high score
+}
+
+function getCredentials() {
+  var initials = document.querySelector(".initials").value;
+
+  var scores = {
+    score: time,
+    initials: initials,
+  };
+  var scoreArray = JSON.parse(window.localStorage.getItem("user")) || [];
+  console.log(scoreArray);
+  scoreArray.push(scores);
+  window.localStorage.setItem("user", JSON.stringify(scoreArray));
+
+  console.log(scores);
+  //document.getElementById("#countdown");
+}
 
 //EVENT LISTENERS----------------------------------------------------------
 startButtonEl.addEventListener("click", startQuiz);

@@ -1,0 +1,106 @@
+* {
+  margin: 0px;
+  background-color: black;
+  font-weight: lighter;
+  color: yellowgreen;
+}
+
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result {
+    top: 20px;
+    margin-top: 20px;
+
+
+} */
+
+#start-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: yellowgreen;
+}
+
+#instructions {
+  font-size: 20px;
+  color: white;
+}
+
+.timer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+button {
+  display: inline-block;
+  justify-content: center;
+  font-size: 30px;
+  text-align: center;
+  color: yellowgreen;
+}
+
+#hs {
+    font-size: 20px;
+    color: white;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    margin-left: 330px ;
+    margin-right: 0px ;
+}
+
+.questions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* border: solid white; */
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+  color: yellowgreen;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/*
+h1 {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.intro-text {
+    background-color:black;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+*/

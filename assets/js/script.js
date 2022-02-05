@@ -25,12 +25,12 @@ var questionsArray = [
     correctAnswer: "A: 2names",
   },
   {
-    text: "What is the correct JavaScript syntax to write 'Hello World'?",
-    answer1: "A: System.out.println('Hello World')",
-    answer2: "B: println ('Hello World')",
-    answer3: "C: document.write('Hello World')",
-    answer4: "D: response.write('Hello World')",
-    correctAnswer: "C: document.write('Hello World')",
+    text: "How do you create a function in JavaScript?",
+    answer1: "A: function = myFunction()",
+    answer2: "B: function:myFunction()",
+    answer3: "C: function===myFunction()",
+    answer4: "D: function=myFunction",
+    correctAnswer: "A: function = myFunction()",
   },
   {
     text: "Inside which HTML element do we put the JavaScript?",

@@ -10,3 +10,8 @@ This is a timed, multiple choice quiz on the topic of JavaScript. Once completin
 ![question-#1](assets/images/q1.png)
 
 ![scores](assets/images/scores.png)
+
+## Additional Technologies
+Google Fonts: https://fonts.google.com/
+
+

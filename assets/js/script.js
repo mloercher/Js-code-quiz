@@ -164,9 +164,3 @@ function getCredentials() {
 
 //EVENT LISTENERS----------------------------------------------------------
 startButtonEl.addEventListener("click", startQuiz);
-
-//TRIALS--------------------------------------
-//if (currentQuestionIndex < questionsArray.length) {
-//}else {
-//run endGame()
-//}

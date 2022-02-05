@@ -8,19 +8,24 @@
     <title>JavaScript Q Looper!</title>
   </head>
   <body>
-    <div class="intro-text">
-      <h1>JavaScript Quiz!</h1>
-      <br />
-      <p id="instructions"><em>Click 'Start' button to begin</em></p>
+    <div class="main">
+      <div class="intro-text">
+        <h1>JavaScript Quiz!</h1>
+        <br />
+        <p id="instructions"><em>Click 'Start' button to begin</em></p>
+      </div>
+      <div class="timer-btn">
+        <p id="countdown">Timer: 120</p>
+        <br />
+        <button id="start-btn">Start</button>
+      </div>
+      <div class="questions"></div>
+      <div class="end">
+        <div id="initials"></div>
+        <br>
+        <a href="scores.html"><button id="hs">High Scores</button></a>
+      </div>
     </div>
-    <div class="timer-btn">
-      <p id="countdown">Timer: 120</p>
-      <br />
-      <button id="start-btn">Start</button>
-    </div>
-    <div class="questions"></div>
-    <div id="initials"></div>
-    <a href="scores.html"><button id="hs">High Scores</button></a>
   </body>
   <script src="./assets/js/script.js"></script>
 </html>
